@@ -3,6 +3,7 @@ package com.cahs.javareview;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +15,10 @@ public class MainActivity extends AppCompatActivity {
     //Callback methods
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Llamar al método onCreate de la clase padre: AppCompatActivity
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //Inflar el layout
+        setContentView(R.layout.activity_main);//000954609
         Log.d(ETIQUETA,"Entra al onCreate");
         //manageStrings("Carlos", "Hernández");
         //manageInts(78, 69);
@@ -29,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         List<String> stringList = new ArrayList<>();
         for (int index = 0; index < 4; index++) stringList.add("Palabra " + index);
         manageLists(integers, stringList);
+        //Find views
+        //ClassName  objectName = method(int)
+        TextView helloPlanet = findViewById(R.id.textPlanet);
+        TextView helloWorld = findViewById(R.id.textHello);
+
     }
 
     @Override
